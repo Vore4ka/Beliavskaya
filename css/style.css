@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Slab:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+.container {
+    width: 92.5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    margin-top: 18px;
+    margin-bottom: 94px;
+}
+
+
+header .upper {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #939393;
+    margin-bottom: 15px;
+}
+
+header .header-logo {
+    display: block;
+}
+
+header .lang {
+    display: flex;
+    border: 1px solid #959595;
+    height: 46px;
+}
+
+header .lang a {
+    display: block;
+    padding: 11px 34px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: #fff;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    color:#000;
+    text-decoration: none;
+}
+
+header .lang a.active {
+    background: #BFBFBF;
+}
+
+header .lang a.active:hover {
+    background: #BFBFBF;
+}
+
+header .lang a:hover {
+    background: #F3F3F3;
+}
+
+
+header .nav {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+}
+
+header .nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+}
+
+header .nav a:hover,
+header .nav a:active {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 95px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 48.9%;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 120px;
+}
+
+.card .card-img {
+    width: 100%;
+    margin-bottom: 55px;
+    overflow: hidden;
+}
+
+.card img {
+    width: inherit;
+    transition: 0.5s;
+}
+
+.card:hover img {
+    transform: scale(1.05); 
+}
+
+.card h3 {
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 35px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.card:hover h3 {
+    text-decoration: underline;
+    text-underline-offset: 2px
+}
+
+.card .info {
+    font-size: 18px;
+    text-align: center;
+}
+
+.card .info p {
+    display: inline;
+    padding-right: 14px;
+}
+
+.card .info p:last-child {
+    padding-right: 0;
+}
+
+.card .info p:not(:first-child) {
+    border-left: 1px solid black;
+    padding-left: 15px;
+}
+
+.contact-card {
+    border: 70px solid #D9D9D9;
+    padding: 97px 74px;
+    width: 48.9%;
+    margin-top: 40px;
+}
+
+.contact-card h2 {
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 85px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contact-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+}
+
+.contact-card form input {
+    border: none;
+    border-bottom: 1px solid #D9D9D9;
+    padding-bottom: 10px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.contact-card form input:active,
+.contact-card form input:focus {
+    outline: none;
+    background-color: #fff;
+}
+
+.contact-card form input::-webkit-input-placeholder {
+    color: #000;
+}
+.contact-card form input:-moz-placeholder {
+    color: #000;
+}
+
+.contact-card form input[name="message"] {
+    margin-top: 33px;
+    margin-bottom: 54px;
+}
+
+.contact-card form button {
+    height: 42px;
+    font-weight: 400;
+    font-size: 20px;
+    background: none;
+    border: 1px solid #939393;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contact-card form button:hover {
+    background: #939393;
+    color: #fff;
+}
+
+.contact-card form button:active {
+    background: #000;
+    color: #fff;
+}
+
+@media (max-width: 1900px) {
+    .contact-card {
+        border: 50px solid #D9D9D9;
+        padding: 77px 54px;
+    }
+
+    .contact-card h2 {
+        margin-bottom: 65px;
+    }
+
+    .contact-card form {
+        gap: 27px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .contact-card {
+        padding: 57px 34px;
+    }
+
+    .contact-card h2 {
+        font-size: 36px;
+        margin-bottom: 45px;
+        margin-top: 50px;
+    }
+
+    .contact-card form {
+        gap: 17px;
+    }
+
+    .contact-card form input {
+        font-size: 18px;
+    }
+
+    .contact-card form input[name="message"] {
+        margin-top: 33px;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .contact-card {
+        border: 40px solid #D9D9D9;
+        padding: 47px 24px;
+    }
+    .contact-card h2 {
+        margin-top: 20px;
+    }
+}
+
+.last-card {
+    width: 48.9%;
+    margin-top: 40px;
+}
+
+.last-card img{
+    width: 100%;
+}
+
+footer {
+    margin-top: 165px;
+    background-color: #D9D9D9;
+    padding: 45px 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 229%;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-logo {
+    display: inline-block;
+}
+
+footer .social {
+    display: flex;
+    gap: 35px;
+    justify-content: flex-end;
+}
+
+
+
+
+/* мобильная версия */
+
+header .mob {
+    display: none;
+}
+
+header .mob .hidden{
+    width: 22px;
+    display: hidden;
+}
+
+header .mob .header-logo img{
+    width: 121px;
+}
+
+header .mob input {
+    display: none; 
+}
+
+header .mob .menu-content {
+    display: none;
+}
+
+@media (max-width: 1279px) {
+
+    header {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    header .container {
+        display: none;
+    }
+
+    header .mob {
+        display: block;
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header .mob .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header .mob .menu a {
+        display: inline;
+        text-align: center;
+    }
+
+    header .mob .lang {
+        width: 150px;
+        height: 35px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    header .mob .lang a {
+        padding: 9px 27px;
+        font-size: 14px;
+    }
+
+    header .mob .nav {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header .mob .menu-content {
+        margin-bottom: 30px;
+    }
+
+    header .mob .burger {
+        margin-top: 12px;
+        order: 2;
+    }
+
+    header .mob .center {
+        text-align: center;
+    }
+
+    header .mob #ham:checked~div .menu-content {
+        display: block;
+    }
+
+
+    .container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        max-width: 600px;
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    
+    .card .card-img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .card h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .card .info {
+        font-size: 12px;
+    }
+    
+    .card .info p {
+        padding-right: 10px;
+    }
+    
+    .card .info p:not(:first-child) {
+        padding-left: 11px;
+    }
+
+    .last-card {
+        max-width: 600px;
+        width: 100%;
+        margin-top: 40px;
+    }
+    
+    .last-card img{
+        width: 100%;
+    }
+
+    .contact-card {
+        border: 30px solid #D9D9D9;
+        padding: 67px 44px;
+        max-width: 600px;
+        width: 100%;
+        margin-top: -5px;
+        order: 2;
+    }
+    
+    .contact-card h2 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .contact-card form {
+        gap: 20px;
+    }
+    
+    .contact-card form input {
+        padding-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .contact-card form input[name="message"] {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .contact-card form button {
+        height: 30px;
+        font-size: 16px;
+    }
+
+
+    footer {
+        margin-top: 105px;
+        padding: 15px 0;
+        font-size: 14px;
+    }
+
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .rights {
+        order: 3;
+    }
+
+    footer .join {
+        order: 1;
+    }
+    
+    footer .footer-logo {
+        display: inline-block;
+        order: 2;
+    }
+    
+    footer .footer-logo img{
+        width: 121px;
+    }
+
+    footer .social {
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+    }
+    
+}
