@@ -13,11 +13,14 @@
     margin-right: auto;
 }
 
+
+/* header */
+
+
 header {
     margin-top: 18px;
-    margin-bottom: 94px;
+    margin-bottom: 90px;
 }
-
 
 header .upper {
     display: flex;
@@ -78,6 +81,10 @@ header .nav a:hover,
 header .nav a:active {
     font-weight: 400;
 }
+
+
+/* main */
+
 
 h1 {
     font-size: 40px;
@@ -230,6 +237,7 @@ h1 {
     .contact-card form {
         gap: 27px;
     }
+    
 }
 
 @media (max-width: 1600px) {
@@ -276,6 +284,11 @@ h1 {
     width: 100%;
 }
 
+
+
+/* footer */
+
+
 footer {
     margin-top: 165px;
     background-color: #D9D9D9;
@@ -301,6 +314,374 @@ footer .social {
 }
 
 
+/* о выставке */
+
+.about-exhibition {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.about-exhibition .img-wrapper {
+    width: 48.9%;
+}
+
+.about-exhibition img {
+    width: 100%;
+}
+
+.about-exhibition .about {
+    border: 50px solid #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px;
+    width: 48.9%;
+}
+
+.about-exhibition .about h1 {
+    margin-bottom: 40px;
+}
+
+.about-exhibition .about .info {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.about-exhibition .about .info p {
+    display: inline;
+    padding-right: 14px;
+}
+
+.about-exhibition .about .info p:last-child {
+    padding-right: 0;
+}
+
+.about-exhibition .about .info p:not(:first-child) {
+    border-left: 1px solid black;
+    padding-left: 15px;
+}
+
+
+.about-exhibition .about .desc {
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/* картинки */
+
+.another {
+    display: flex;
+    row-gap: 80px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 1830px) {
+    .another .car-elem {
+        width: 32%;
+    }
+
+    .about-exhibition .about {
+        border: 50px solid #D9D9D9;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .about-exhibition .about {
+        border: 30px solid #D9D9D9;
+    }
+
+    .about-exhibition .about h1 {
+        font-size: 30px;
+    }
+
+    .about-exhibition .about .desc {
+        font-size: 18px;
+    }
+}
+
+
+.another .car-elem {
+    cursor: pointer;
+    position: relative;
+    background: #000;
+}
+
+.another .car-elem>img {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 124ms linear;
+}
+
+.another .car-elem:hover>img {
+    opacity: 0.5;
+}
+
+.another .car-elem:hover>.actions{
+    display: flex;
+}
+
+
+.another .car-elem .actions {
+    position: absolute;
+    top: 88%;
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    padding: 0 35px;
+}
+
+.another .car-elem .actions button,
+.carousel-header button {
+    background: none;
+    outline: none;
+    border: none;
+    height: 30px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.another .car-elem .actions .likes{
+    display: flex;
+}
+
+.another .car-elem .actions .likes .heart {
+    background: url('../img/heart-empty.svg') no-repeat;
+}
+
+.another .car-elem .actions .likes .heart:hover {
+    background: url('../img/white-heart.svg') no-repeat;
+}
+
+.another .car-elem .actions .likes .red-heart {
+    background: url('../img/red-heart.svg') no-repeat;
+}
+
+.another .car-elem .actions .share {
+    background: url('../img/share-empty.svg') no-repeat;
+}
+
+.another .car-elem .actions .share:hover {
+    background: url('../img/share-white.svg') no-repeat;
+}
+
+
+.another .car-elem .actions .likes-counter {
+    font-weight: 400;
+    font-size: 22px;
+    color: #FFF;
+    margin-left: 10px;
+}
+
+
+/* поделиться */
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100vw;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.7);
+    z-index: 100;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    
+}
+
+.modal {
+   width: 640px;
+   height: 340px;
+   z-index: 2;
+   background: #fff;
+   padding: 25px;
+}
+
+.modal .close-modal {
+    background: url('../img/close.svg') no-repeat;
+    background-size: 25px 25px;
+    width: 25px;
+    height: 25px;
+    outline: none;
+    border: none;
+    float: right;
+    cursor: pointer;
+}
+
+.modal h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    margin-top: 45px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.modal .share-nets {
+    width: 350px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.modal .ref {
+    width: 400px;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal .ref p{
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal .ref .copy {
+    width: 40px;
+    height: 38px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modal .ref .copy img{
+    width: 30px;
+    height: 30px;
+}
+
+/* карусель */
+
+
+.all-white {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: #fff;
+    overflow-y: scroll;
+}
+
+.all-white .container{
+    margin-top: 40px;
+}
+
+
+.all-white .carousel-header {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-header button {
+    height: 35px;
+    margin-right: 30px;
+}
+
+
+.carousel-header .larger {
+    background: url('../img/larger.svg') no-repeat;
+}
+
+.carousel-header .smaller {
+    background: url('../img/smaller.svg') no-repeat;
+}
+
+.carousel-header  .c-share {
+    background: url('../img/share-black.svg') no-repeat;
+    width: 45px;
+}
+
+.carousel-header  .c-share:hover {
+    background: url('../img/share-full-black.svg') no-repeat;
+}
+
+.carousel-header  .c-heart {
+    background: url('../img/black-heart.svg') no-repeat;
+    margin-right: 10px;
+}
+
+.carousel-header  .c-heart:hover {
+    background: url('../img/black-full-heart.svg') no-repeat;
+}
+
+.carousel-header  .c-red-heart{
+    background: url('../img/red-heart.svg') no-repeat;
+    margin-right: 10px;
+}
+
+.carousel-header .c-likes-counter {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.carousel-header  .close {
+    background: url('../img/close.svg') no-repeat;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel .prev-btn {
+    border: none;
+    outline: none;
+    background: url('../img/left-arrow.svg') no-repeat;
+    width: 25px;
+    height: 47px;
+    cursor: pointer;
+}
+
+.carousel .next-btn {
+    border: none;
+    outline: none;
+    background: url('../img/right-arrow.svg') no-repeat;
+    width: 25px;
+    height: 47px;
+    cursor: pointer;
+}
+
+.carousel img {
+    height: 90vh;
+    display: none;
+}
+
+
+
+
+
+
 
 
 /* мобильная версия */
@@ -309,12 +690,12 @@ header .mob {
     display: none;
 }
 
-header .mob .hidden{
+header .mob .hidden {
     width: 22px;
     display: hidden;
 }
 
-header .mob .header-logo img{
+header .mob .header-logo img {
     width: 121px;
 }
 
@@ -326,7 +707,120 @@ header .mob .menu-content {
     display: none;
 }
 
+.mob-car {
+    margin-top: 100px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mob-car .arrows {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.mob-car button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.mob-car .arrows .mob-prev-btn{
+    background: url('../img/left-arrow-mob.svg') no-repeat; 
+}
+
+.mob-car .arrows .mob-next-btn{
+    background: url('../img/right-arrow-mob.svg') no-repeat; 
+}
+
+.mob-car img {
+    width: 100%;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.mob-car .carousel-footer {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mob-car .carousel-footer .mob-c-share{
+    background: url('../img/share-black.svg') no-repeat;
+    width: 35px;
+    margin-right: 20px;
+    background-size: 35px 25px;
+}
+
+
+.mob-car .carousel-footer .mob-c-heart{
+    background: url('../img/black-heart.svg') no-repeat;
+    width: 30px;
+    background-size: 30px 25px;
+}
+
+.mob-car .carousel-footer .mob-c-heart:hover {
+    background: url('../img/black-full-heart.svg') no-repeat;
+    width: 30px;
+    background-size: 30px 25px;
+}
+
+.mob-car .carousel-footer .mob-c-red-heart{
+    background: url('../img/red-heart.svg') no-repeat;
+    width: 30px;
+    background-size: 30px 25px;
+}
+
+.mob-car .carousel-footer .mob-close {
+    background: url('../img/close.svg') no-repeat;
+    background-size: 25px 25px;
+    margin-right: auto;
+}
+
+.mob-car .carousel-footer .mob-c-likes-counter {
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
 @media (max-width: 1279px) {
+
+
+    .mob-car {
+        display: flex;
+    } 
+
+    .all-white .container {
+        display: none;
+    }
+
+    
+    .about-exhibition .about h1 {
+        font-size: 22px;
+    }
+
+    .about-exhibition .about .info {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .about-exhibition .about .desc {
+        font-size: 16px;
+    }
+
+    .another {
+        justify-content: space-around;
+    }
+    
+    .another .car-elem {
+        width: 45%;
+    }
+
+
 
     header {
         margin-top: 15px;
@@ -515,4 +1009,114 @@ header .mob .menu-content {
         gap: 35px;
     }
     
+}
+
+
+
+@media (max-width: 800px) {
+    .another {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .another .car-elem {
+        width: 95%;
+        max-width: 450px;
+    }
+
+    .about-exhibition {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+       
+    }
+    
+    .about-exhibition .img-wrapper {
+        width: 100%;
+        max-width: 450px;
+    }
+    
+    .about-exhibition img {
+        width: 100%;
+    }
+    
+    .about-exhibition .about {
+        margin-top: -10px;
+        border: 20px solid #D9D9D9;
+        padding: 40px 18px;
+        width: 100%;
+        max-width: 450px;
+        min-height: 400px;
+    }
+    
+    .about-exhibition .about h1 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .about-exhibition .about .info {
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+    
+    .about-exhibition .about .desc {
+        font-size: 14px;
+    }
+
+    .modal {
+        max-width: 375px;
+        width: 100%;
+        height: 210px;
+        z-index: 2;
+        background: #fff;
+        padding: 15px;
+     }
+     
+     .modal .close-modal {
+         background: url('../img/close.svg') no-repeat;
+         background-size: 20px 20px;
+         width: 20px;
+         height: 20px;
+         outline: none;
+         border: none;
+         float: right;
+         cursor: pointer;
+     }
+     
+     .modal h4 {
+         font-family: 'Raleway', sans-serif;
+         font-weight: 400;
+         font-size: 20px;
+         margin-top: 23px;
+         margin-bottom: 33px;
+     }
+     
+     .modal .share-nets {
+         max-width: 250px;
+         width: 100%;
+         margin-bottom: 27px;
+     }
+     
+     .modal .ref {
+         max-width: 325px;
+         width: 100%;
+         height: 35px;
+         padding-left: 6px;
+     }
+     
+     .modal .ref p {
+         font-weight: 400;
+         font-size: 12px;
+         margin-top: 8px;
+     }
+     
+     .modal .ref .copy {
+         width: 35px;
+         height: 33px;
+     }
+     
+     .modal .ref .copy img{
+         width: 20px;
+         height: 20px;
+     }
 }
